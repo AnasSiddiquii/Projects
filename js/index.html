@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: black;
+      }
+
+      .star1 {
+        animation: color1 500ms linear infinite;
+        animation-delay: 100ms;
+      }
+      @keyframes color1 {
+        from {
+          color: red;
+        }
+        to {
+          color: black;
+          font-weight: bolder;
+        }
+      }
+      /* @keyframes color1{from{color:black;}to{color:red;font-weight: bolder;}} */
+      #a {
+        position: absolute;
+        top: 50px;
+        left: 80px;
+      }
+      #b {
+        position: absolute;
+        top: 126px;
+        left: 80px;
+      }
+
+      .star2 {
+        animation: color2 500ms linear infinite;
+        animation-delay: 300ms;
+      }
+      @keyframes color2 {
+        from {
+          color: green;
+        }
+        to {
+          color: black;
+          font-weight: bolder;
+        }
+      }
+      /* @keyframes color2{from{color:black;}to{color:green;font-weight: bolder;}} */
+      #c {
+        position: absolute;
+        top: 350px;
+        left: 80px;
+      }
+      #d {
+        position: absolute;
+        top: 426px;
+        left: 80px;
+      }
+
+      .star3 {
+        animation: color3 500ms linear infinite;
+        animation-delay: 500ms;
+      }
+      @keyframes color3 {
+        from {
+          color: blue;
+        }
+        to {
+          color: black;
+          font-weight: bolder;
+        }
+      }
+      /* @keyframes color3{from{color:black;}to{color:green;font-weight: bolder;}} */
+      #e {
+        position: absolute;
+        top: 650px;
+        left: 80px;
+      }
+      #f {
+        position: absolute;
+        top: 726px;
+        left: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="star1">
+      <div id="a">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+
+      <div id="b">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="star2">
+      <div id="c">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+
+      <div id="d">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="star3">
+      <div id="e">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+
+      <div id="f">
+        <script>
+          for (let i = 0; i <= 10; i++) {
+            for (let k = 0; k <= i; k++) {
+              document.write((end = "&nbsp;&nbsp;"));
+            }
+            for (let j = 10; j >= i; j--) {
+              document.write((end = "&nbsp;*&nbsp;"));
+            }
+            document.write("<br>");
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

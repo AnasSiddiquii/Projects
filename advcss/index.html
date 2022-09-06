@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance CSS</title>
+
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      #container {
+        width: 100%;
+        height: auto;
+      }
+
+      #ludo-board {
+        border: 2px solid black;
+        display: inline-grid;
+        grid-template-columns: 250px 128px 250px;
+        grid-template-rows: 250px 128px 250px;
+      }
+
+      /* boxes */
+      #g-box {
+        border: 40px solid green;
+        display: inline-grid;
+        grid-template-columns: 50px 50px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+      }
+
+      #y-box {
+        border: 40px solid yellow;
+        display: inline-grid;
+        grid-template-columns: 50px 50px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+      }
+
+      #b-box {
+        border: 40px solid blue;
+        display: inline-grid;
+        grid-template-columns: 50px 50px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+      }
+
+      #r-box {
+        border: 40px solid red;
+        display: inline-grid;
+        grid-template-columns: 50px 50px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+      }
+
+      /* blocks */
+      #g-block {
+        background-color: green;
+        padding: 25px;
+        border: 1px solid black;
+        animation: block 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #y-block {
+        background-color: yellow;
+        padding: 25px;
+        border: 1px solid black;
+        animation: block 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #b-block {
+        background-color: blue;
+        padding: 25px;
+        border: 1px solid black;
+        animation: block 1s linear infinite;
+        animation-delay: 600ms;
+      }
+
+      #r-block {
+        background-color: red;
+        padding: 25px;
+        border: 1px solid black;
+        animation: block 1s linear infinite;
+        animation-delay: 800ms;
+      }
+
+      @keyframes block {
+        from {
+          background-color: white;
+        }
+      }
+
+      /* paths */
+      #path {
+        justify-self: center;
+        align-self: center;
+      }
+
+      #path table {
+        width: auto;
+        height: auto;
+        border-collapse: collapse;
+      }
+
+      #path td {
+        border: 2px solid black;
+        padding: 20px;
+      }
+
+      /* animation */
+      #g1 {
+        background-color: green;
+      }
+
+      #g2 {
+        animation: color1 1s linear infinite;
+        animation-delay: 100ms;
+      }
+
+      #g3 {
+        animation: color1 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #g4 {
+        animation: color1 1s linear infinite;
+        animation-delay: 300ms;
+      }
+
+      #g5 {
+        animation: color1 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #g6 {
+        animation: color1 1s linear infinite;
+        animation-delay: 500ms;
+      }
+
+      @keyframes color1 {
+        from {
+          background-color: rgb(182, 241, 182);
+        }
+
+        to {
+          background-color: green;
+        }
+      }
+
+      #y1 {
+        background-color: yellow;
+      }
+
+      #y2 {
+        animation: color2 1s linear infinite;
+        animation-delay: 100ms;
+      }
+
+      #y3 {
+        animation: color2 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #y4 {
+        animation: color2 1s linear infinite;
+        animation-delay: 300ms;
+      }
+
+      #y5 {
+        animation: color2 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #y6 {
+        animation: color2 1s linear infinite;
+        animation-delay: 500ms;
+      }
+
+      @keyframes color2 {
+        from {
+          background-color: rgb(241, 241, 182);
+        }
+
+        to {
+          background-color: yellow;
+        }
+      }
+
+      #b1 {
+        background-color: blue;
+      }
+
+      #b2 {
+        animation: color4 1s linear infinite;
+        animation-delay: 100ms;
+      }
+
+      #b3 {
+        animation: color4 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #b4 {
+        animation: color4 1s linear infinite;
+        animation-delay: 300ms;
+      }
+
+      #b5 {
+        animation: color4 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #b6 {
+        animation: color4 1s linear infinite;
+        animation-delay: 500ms;
+      }
+
+      @keyframes color4 {
+        from {
+          background-color: rgb(187, 187, 247);
+        }
+
+        to {
+          background-color: blue;
+        }
+      }
+
+      #r1 {
+        background-color: red;
+      }
+
+      #r2 {
+        animation: color3 1s linear infinite;
+        animation-delay: 100ms;
+      }
+
+      #r3 {
+        animation: color3 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #r4 {
+        animation: color3 1s linear infinite;
+        animation-delay: 300ms;
+      }
+
+      #r5 {
+        animation: color3 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #r6 {
+        animation: color3 1s linear infinite;
+        animation-delay: 500ms;
+      }
+
+      @keyframes color3 {
+        from {
+          background-color: rgb(252, 189, 189);
+        }
+
+        to {
+          background-color: red;
+        }
+      }
+
+      /* center */
+      #c-box {
+        display: inline-grid;
+        grid-template-columns: 50px 50px;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        animation: center 1s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes center {
+        /* to{background-color: gray;} */
+      }
+
+      #g-tri {
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 50px solid green;
+        border-bottom: 50px solid transparent;
+        position: relative;
+        top: 50px;
+        right: 1px;
+        animation: trig 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes trig {
+        from {
+          right: 45px;
+          border-left: 50px solid transparent;
+        }
+      }
+
+      #y-tri {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-top: 50px solid yellow;
+        border-right: 50px solid transparent;
+        position: relative;
+        top: 45px;
+        right: 55px;
+        animation: triy 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes triy {
+        from {
+          top: 1px;
+          border-top: 50px solid transparent;
+        }
+      }
+
+      #b-tri {
+        width: 0px;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-right: 50px solid blue;
+        border-bottom: 50px solid transparent;
+        position: relative;
+        bottom: 50px;
+        left: 1px;
+        animation: trib 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes trib {
+        from {
+          left: 45px;
+          border-right: 50px solid transparent;
+        }
+      }
+
+      #r-tri {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-bottom: 50px solid red;
+        border-right: 50px solid transparent;
+        position: relative;
+        top: 5px;
+        left: 5px;
+        animation: trir 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes trir {
+        from {
+          top: 50px;
+          border-bottom: 50px solid transparent;
+        }
+      }
+
+      /* inner-tri */
+      #g-trii {
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 50px solid green;
+        border-bottom: 50px solid transparent;
+        position: absolute;
+        top: 274px;
+        left: 268px;
+        animation: innerg 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes innerg {
+        to {
+          border-left: 50px solid transparent;
+        }
+      }
+
+      #y-trii {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-top: 50px solid yellow;
+        border-right: 50px solid transparent;
+        position: absolute;
+        top: 269px;
+        left: 274px;
+        animation: innery 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes innery {
+        to {
+          border-top: 50px solid transparent;
+        }
+      }
+
+      #b-trii {
+        width: 0px;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-right: 50px solid blue;
+        border-bottom: 50px solid transparent;
+        position: absolute;
+        top: 274px;
+        left: 330px;
+        animation: innerb 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes innerb {
+        to {
+          border-right: 50px solid transparent;
+        }
+      }
+
+      #r-trii {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-bottom: 50px solid red;
+        border-right: 50px solid transparent;
+        position: absolute;
+        top: 329px;
+        left: 274px;
+        animation: innerr 2s linear infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes innerr {
+        to {
+          border-bottom: 50px solid transparent;
+        }
+      }
+
+      /* stars */
+      #stary {
+        position: absolute;
+        font-size: 30px;
+        top: 65px;
+        left: 270px;
+        animation: star 1s linear infinite;
+        animation-delay: 200ms;
+      }
+
+      #starg {
+        position: absolute;
+        font-size: 30px;
+        top: 315px;
+        left: 100px;
+        animation: star 1s linear infinite;
+        animation-delay: 400ms;
+      }
+
+      #starr {
+        position: absolute;
+        font-size: 30px;
+        top:  480px;
+        left: 355px;
+        animation: star 1s linear infinite;
+        animation-delay: 600ms;
+      }
+
+      #starb {
+        position: absolute;
+        font-size: 30px;
+        top: 230px;
+        left: 520px;
+        animation: star 1s linear infinite;
+        animation-delay: 800ms;
+      }
+
+      @keyframes star {
+        from {
+          font-weight: bolder;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="ludo-board">
+        <!-- 1st section -->
+        <div id="g-box">
+          <div id="g-block"></div>
+          <div id="g-block"></div>
+          <div id="g-block"></div>
+          <div id="g-block"></div>
+        </div>
+
+        <div id="path">
+          <table>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="y2"></td>
+              <td id="y1"></td>
+            </tr>
+            <tr>
+              <td>
+                <p id="starg">&#9734;</p>
+              </td>
+              <td id="y3"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="y4"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="y5"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="y6"></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="y-box">
+          <div id="y-block"></div>
+          <div id="y-block"></div>
+          <div id="y-block"></div>
+          <div id="y-block"></div>
+        </div>
+
+        <!-- 2nd section -->
+        <div id="path">
+          <table>
+            <tr>
+              <td></td>
+              <td id="g1"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="g2"></td>
+              <td id="g3"></td>
+              <td id="g4"></td>
+              <td id="g5"></td>
+              <td id="g6"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <p id="stary">&#9734;</p>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="c-box">
+          <div id="g-tri"></div>
+          <div id="y-tri"></div>
+          <div id="r-tri"></div>
+          <div id="b-tri"></div>
+
+          <div id="g-trii"></div>
+          <div id="y-trii"></div>
+          <div id="r-trii"></div>
+          <div id="b-trii"></div>
+        </div>
+
+        <div id="path">
+          <table>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <p id="starr">&#9734;</p>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td id="b6"></td>
+              <td id="b5"></td>
+              <td id="b4"></td>
+              <td id="b3"></td>
+              <td id="b2"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td id="b1"></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 3rd section -->
+        <div id="r-box">
+          <div id="r-block"></div>
+          <div id="r-block"></div>
+          <div id="r-block"></div>
+          <div id="r-block"></div>
+        </div>
+
+        <div id="path">
+          <table>
+            <tr>
+              <td></td>
+              <td id="r6"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="r5"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="r4"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td id="r3"></td>
+              <td>
+                <p id="starb">&#9734;</p>
+              </td>
+            </tr>
+            <tr>
+              <td id="r1"></td>
+              <td id="r2"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+
+        <div id="b-box">
+          <div id="b-block"></div>
+          <div id="b-block"></div>
+          <div id="b-block"></div>
+          <div id="b-block"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

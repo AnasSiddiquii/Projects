@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+
+    <!-- css from folder -->
+    <link rel="stylesheet" href="flipTimer/css/flipTimer.css" />
+
+    <!-- jq from google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- js from folder -->
+    <script src="flipTimer/js/jquery.flipTimer.js"></script>
+
+    <style>
+        .timer {
+            margin-top: -120px;
+        }
+
+        @media screen and (max-width: 500px) {
+            img {
+                display: none;
+            }
+
+            .timer {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="head">
+            <h1>
+                <u><b>Diwali Festival Sale</b></u>
+            </h1>
+            <h2>Comming Soon...</h2>
+        </div>
+
+        <img src="https://assets.khojdeal.com/cdn/uploads/2021/10/05170923/Amazon-Diwali-Sale-1024x576.png"
+            width="100%" />
+
+        <!-- html fron site -->
+        <div class="timer">
+            <div class="flipTimer">
+                <div class="days"></div>
+                <div class="hours"></div>
+                <div class="minutes"></div>
+                <div class="seconds"></div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        $(document).ready(function () {
+            $(".flipTimer").flipTimer({
+                // count up or countdown
+                direction: "down",
+
+                // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
+                date: "oct 23, 2022 24:00:00",
+
+                // callback works only with direction = "down"
+                callback: function () {
+                    alert("times up!");
+                },
+            });
+        });
+    </script>
+    </div>
+</body>
+
+</html>

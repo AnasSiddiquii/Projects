@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS</title>
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+
+
+  .header {
+    background: #6b3fe9;
+    width: 100%;
+    height: 70px;
+    color: #ffffff;
+  }
+
+  .headerbox1 {
+    float: left;
+    padding-top: 20px;
+    padding-left: 100px;
+  }
+
+  .headerbox2 {
+    float: left;
+    padding-top: 40px;
+    padding-left: 50px;
+  }
+
+  .headerbox2 ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    font-size: small;
+  }
+
+  .headerbox3 {
+    float: right;
+    padding-top: 30px;
+    padding-right: 100px;
+  }
+
+  .headerbox3 button {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 5px;
+    color: #6b3fe9;
+  }
+
+
+
+
+  .page1 {
+    background: #6b3fe9;
+    width: 100%;
+    height: 480px;
+    color: #ffffff;
+    border-bottom-right-radius: 150px;
+  }
+
+  .page1box1 {
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .page1box1 button {
+    background: #00dadd;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+  .page1box2 {
+    float: right;
+  }
+
+  .page1box2 img {
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+
+
+  .page2 {
+    background: #ffffff;
+    width: 100%;
+    height: 550px;
+  }
+
+  .page2box1 {
+    float: left;
+  }
+
+  .page2box1 img {
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .page2box2 {
+    float: right;
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+  .page2box2 button {
+    background: #ffc728;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+
+
+  .page3 {
+    background: #d1d1d1;
+    width: 100%;
+    height: 550px;
+    border-top-left-radius: 150px;
+  }
+
+  .page3box1 {
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .page3box1 button {
+    background: #ffc728;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+  .page3box2 {
+    float: right;
+  }
+
+  .page3box2 img {
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+
+
+  .page4 {
+    background: #6b3fe9;
+    width: 100%;
+    height: 550px;
+    color: #ffffff;
+    border-bottom-right-radius: 150px;
+  }
+
+  .page4box1 {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+
+
+  .page5 {
+    background: #ffffff;
+    width: 100%;
+    height: 550px;
+  }
+
+  .page5box1 {
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .page5box2 {
+    float: right;
+  }
+
+  .page5box2 ul {
+    background: #d1d1d1;
+    margin-top: 100px;
+    margin-right: 100px;
+    list-style: none;
+    border-radius: 15px;
+    padding: 50px 20px;
+  }
+
+  .page5box2 button {
+    background: #ffc728;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+
+
+  .footer {
+    background: #6b3fe9;
+    width: 100%;
+    height: 150px;
+    color: #ffffff;
+    border-top-left-radius: 150px
+  }
+
+  .footerbox1 {
+    float: left;
+    padding-top: 40px;
+    padding-left: 100px;
+  }
+
+  .footerbox2 {
+    float: left;
+    padding-top: 50px;
+    padding-left: 200px;
+    text-align: center;
+  }
+
+  .footerbox2 ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    font-size: small;
+  }
+
+  .footerbox3 {
+    float: right;
+    padding-top: 50px;
+    padding-right: 150px;
+    width: 100px;
+  }
+
+  .footerbox3 ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    font-size: small;
+  }
+
+  .footerbox3 img {
+    float: right;
+    width: 20px;
+  }
+
+
+
+  h4 {
+    color: #6b3fe9;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+
+
+    <div class="header">
+
+      <div class="headerbox1">
+        <h1>agency</h1>
+      </div>
+
+      <div class="headerbox2">
+        <ul>
+          <a href="#pg1">
+            <li>Home</li>
+          </a>
+          <a href="#pg2">
+            <li>About us</li>
+          </a>
+          <a href="#pg3">
+            <li>Our Services</li>
+          </a>
+          <a href="#pg5">
+            <li>Home</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="headerbox3">
+        <button type="button">CONTACT</button>
+      </div>
+
+    </div>
+
+
+
+    <div class="page1" id="pg1">
+
+      <div class="page1box1">
+        <h1>Creative<br>Design Agency</h1><br>
+        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Etiam vel dolor id nulla gravida blandit.
+        </p><br>
+        <button type="button">LEARN MORE</button>
+      </div>
+
+      <div class="page1box2">
+        <img src="img/page1.PNG">
+      </div>
+
+    </div>
+
+
+
+    <div class="page2" id="pg2">
+
+      <div class="page2box1">
+        <img src="img/page2.PNG">
+      </div>
+
+      <div class="page2box2">
+        <h4>ABOUT US</h4><br>
+        <h1>Digital Agency<br>Providing various Services</h1><br>
+        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Etiam vel dolor id nulla gravida blandit.</p><br>
+        <button type="button">LEARN MORE</button>
+      </div>
+
+    </div>
+
+
+
+    <div class="page3" id="pg3">
+
+      <div class="page3box1">
+        <h4>OUR SERVICES</h4><br>
+        <h1>We can take your<br>business to the<br>next level</h1><br>
+        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Etiam vel dolor id nulla gravida blandit.</p><br>
+        <button type="button">LEARN MORE</button>
+      </div>
+
+      <div class="page3box2">
+        <img src="img/page3.PNG">
+      </div>
+
+    </div>
+
+
+
+    <div class="page4">
+
+      <div class="page4box1">
+        <h5>TESTIMONIALS</h5>
+        <h1>What people say</h1><br>
+        <img src="img/page4.PNG">
+      </div>
+
+    </div>
+
+
+
+    <div class="page5" id="pg5">
+
+      <div class="page5box1">
+        <h4>CONTACT US</h4><br>
+        <h1>Don`t Hesitate to<br>Contact us for<br>any information.</h1><br>
+        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Lorem ipsum dolor sit amet, consecteture adipiscing elit.<br>
+          Etiam vel dolor id nulla gravida blandit.</p><br>
+      </div>
+
+      <div class="page5box2">
+        <ul>
+          <li><input type="text" placeholder="Full Name"></li><br>
+          <li><input type="text" placeholder="Email"></li><br>
+          <li><textarea placeholder="Message"></textarea></li><br>
+          <li><button type="button">SUBMIT</button></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    <div class="footer">
+
+      <div class="footerbox1">
+        <h1>agency</h1>
+      </div>
+
+      <div class="footerbox2">
+        <ul>
+          <a href="#pg1">
+            <li>Home</li>
+          </a>
+          <a href="#pg2">
+            <li>About us</li>
+          </a>
+          <a href="#pg3">
+            <li>Our Services</li>
+          </a>
+          <a href="#pg5">
+            <li>Support</li>
+          </a>
+        </ul><br><br><br>
+        <ul>
+          <li>
+            <h6>Copyright @ Chirag Bactor 2020</h6>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footerbox3">
+        <ul>
+          <a href="E:\Full Stack\Facebook\Facebook.html">
+            <li><img src="E:\Full Stack\Facebook\Logo.png"></li>
+          </a>
+          <li>insta</li>
+          <li>twitter</li>
+          <li>linkedin</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
