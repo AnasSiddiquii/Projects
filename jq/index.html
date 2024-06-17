@@ -65,24 +65,36 @@
             </div>
         </div>
     </center>
-
     <script>
         $(document).ready(function () {
-            $(".flipTimer").flipTimer({
-                // count up or countdown
-                direction: "down",
-
-                // the target <a href="https://www.jqueryscript.net/time-clock/">date</a>
-                date: "oct 23, 2022 24:00:00",
-
-                // callback works only with direction = "down"
-                callback: function () {
-                    alert("times up!");
-                },
-            });
+            function getNextTargetDate() {
+                var now = new Date();
+                var year = now.getFullYear();
+                var targetDate = new Date(`Oct 23, ${year} 24:00:00`);
+                
+                // If the target date has already passed this year, set it for next year
+                if (now > targetDate) {
+                    targetDate = new Date(`Oct 23, ${year + 1} 24:00:00`);
+                }
+    
+                return targetDate;
+            }
+    
+            function initializeTimer() {
+                var nextTargetDate = getNextTargetDate();
+                $(".flipTimer").flipTimer({
+                    direction: "down",
+                    date: nextTargetDate,
+                    callback: function () {
+                        alert("Time's up! Starting countdown for next year.");
+                        initializeTimer(); // Restart the timer with the next year's date
+                    },
+                });
+            }
+    
+            initializeTimer();
         });
-    </script>
-    </div>
+    </script>    
 </body>
 
 </html>
